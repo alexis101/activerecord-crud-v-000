@@ -77,8 +77,8 @@ end
 def can_update_using_update_method
   # Update movie title to "Wat, huh?"
   Movie.create(title: "Wat?")
-  Movie.find(title: "Wat?")
-  Movie.update(title: "Wat, huh?")
+  movie = Movie.find_by(title: "Wat?")
+  movie.update(title: "Wat, huh?")
   #Movie.update(title: "Wat?", :title => "Wat, huh?")
 end
 
